@@ -1,8 +1,15 @@
 <main class="container home">
   <div class="row home-header">
-    <div class="col-md-1 mr-auto">
-      <button class="btn btn-primary mr-auto">New</button> 
+<div class="col-md-1 mr-auto">
+  <button id="new-project-button" class="btn btn-primary mr-auto">New</button> 
+  <div class="project-popover is-hidden" id="new-project-popover">
+    <div class="form-group">
+      <input type="text" placeholder="Name this project" class="form-control">
     </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <button id="cancel-project-popover" class="btn btn-secondary">Cancel</button>
+  </div>
+</div>
     <div class="col-md-4">
       <h3 class="text-center">Projects</h3> 
     </div>
