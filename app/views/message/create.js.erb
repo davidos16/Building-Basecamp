@@ -1,0 +1,10 @@
+// assign vars
+var chatContainer = document.getElementById('chat-contents')
+var chatInput = document.getElementById('message-input')
+var message = "<%= escape_javascript(render "message.html", message: @message) %>"
+var div = document.createElement('div')
+//  enter message 
+div.innerHTML = message
+//  insert content & clear input 
+chatContainer.appendChild(div.firstChild)
+chatInput.value = ''

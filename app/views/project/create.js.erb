@@ -1,15 +1,12 @@
-// Assign our project list
-
-var projectList = document.getElementById('project-list');
-var projectPopover = document.getElementById('new-project-popover');
-var projectNameInput = document.getElementById('project-name-input');
-var newProject = "<%= escape_javascript(render 'project_card.html.erb', project: @project) %>";
-var div = document.createElement('div');
-
+// Assign project vars 
+var projectList = document.getElementById('project-list')
+var projectPopover = document.getElementById('new-project-popover')
+var projectNameInput = document.getElementById('project-name-input')
+var newProject = "<%= escape_javascript(render "project_card.html", project: @project) %>"
+var div = document.createElement('div')
 // Add newProject string to the inner html
-div.innerHTML = newProject;
-
+div.innerHTML = newProject
 // Append the first child of div variable - add hidden class
-projectList.appendChild(div.firstChild);
-projectPopover.classList.add('is-hidden');
-projectNameInput.value = '';
+projectList.appendChild(div.firstChild)
+projectPopover.classList.add('is-hidden')
+projectNameInput.value = ''

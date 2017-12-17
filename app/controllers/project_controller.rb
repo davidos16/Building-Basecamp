@@ -19,6 +19,16 @@ class ProjectController < ApplicationController
   end
   end
   
+  def show 
+     @project = Project.find(params[:id])
+  end 
+  
+  def chat
+  @message = Message.new
+  @messages = Message.where project_id: params[:id]  #grab all project messages
+  @project = Project.find(params[:id])
+  end
+  
   private
   
   

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'message/create'
+
   root 'project#index'
   
   
-  get 'project/index'
+  get 'projects', to: 'project#index'
   post 'projects', to: 'project#create'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'projects/:id', to: 'project#show', as: 'project'
+  get 'projects/:id/chat', to: 'project#chat', as: 'project_chat'
+  # Project Messaging Routes (Chat)
+  post 'messages', to: 'message#create'
 end

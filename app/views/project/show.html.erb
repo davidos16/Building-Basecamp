@@ -1,0 +1,13 @@
+<main class="container home">
+  <h1 class="project-title text-center">
+    <%= @project.name %>
+  </h1>
+  <div class="row">
+    <%= render "feature_card", feature_link: project_chat_path(@project.id), title: "Campfire", img_src: "campfire", img_alt: "", description: "Chat with the group, ask questions and share stuff." %>
+    <%= render "feature_card", feature_link: '', title: "Message Board", img_src: "message-board", img_alt: "", description: "Ahh, we're a little slow. This feature is coming soon." %>
+    <%= render "feature_card", feature_link: '', title: "To-dos", img_src: "to-do", img_alt: "", description: "Ahh, we're a little slow. This feature is coming soon.." %>
+    <%= render "feature_card", feature_link: '', title: "Schedule", img_src: "schedule", img_alt: "", description: "Ahh, we're a little slow. This feature is coming soon." %>
+    <%= render "feature_card", feature_link: '', title: "Automatic Check-ins", img_src: "checkins", img_alt: "", description: "Ahh, we're a little slow. This feature is coming soon." %>
+    <%= render "feature_card", feature_link: '', title: "Docs & Files", img_src: "docs", img_alt: "", description: "Ahh, we're a little slow. This feature is coming soon." %>
+  </div>
+</main>

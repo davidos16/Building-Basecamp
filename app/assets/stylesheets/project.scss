@@ -1,3 +1,32 @@
 // Place all the styles related to the Project controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+form#new-project-form {
+    display: inline;
+}
+
+
+button#cancel-project-popover {
+    display: inline;
+    }
+    
+    
+.project-nav {
+  text-align: center;
+  font-size: 1.6rem;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+.chat-wrapper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  .chat-form {
+    margin-top: auto;
+  }
+}
